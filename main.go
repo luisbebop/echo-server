@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"log"
 	"net"
+	"encoding/hex"
 )
 
 func main() {
@@ -37,7 +38,7 @@ func handleConnection(conn net.Conn) {
 			conn.Close()
 			return
 		}
-		log.Printf("<-> %s", string(buf[:readBytes]))
+		log.Printf("<-> %s", hex.Dump(buf[:readBytes]))
 		conn.Write([]byte(buf[:readBytes]))
 	}
 }
