@@ -38,7 +38,7 @@ func handleConnection(conn net.Conn) {
 			conn.Close()
 			return
 		}
-		log.Printf("<-> %s", hex.Dump(buf[:readBytes]))
+		log.Printf("<->\n%s", hex.Dump(buf[:readBytes]))
 		conn.Write([]byte(buf[:readBytes]))
 	}
 }
