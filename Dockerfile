@@ -8,6 +8,6 @@ ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
 RUN git clone https://github.com/luisbebop/echo-server.git /opt/echo-server/
 RUN cd /opt/echo-server && git pull && go test && go build
 
-EXPOSE 5000
+EXPOSE 8800
 
 CMD ["/opt/echo-server/echo-server"]

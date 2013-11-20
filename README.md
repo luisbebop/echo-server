@@ -11,7 +11,7 @@ Instructions the hard way
     #3. create a docker container
     $ sudo docker build -t luisbebop/echo-server .
     #4. run the docker container you have created
-    $ sudo docker run -d -p 5000:5000 luisbebop/echo-server
+    $ sudo docker run -d -p 8800:8800 luisbebop/echo-server
 
 Instructions the easy way
 ------------
